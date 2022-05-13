@@ -37,8 +37,8 @@ fun countCommissionVisaMir(
     totalAmountOfDay: Int = 0,
 ) {
     when {
-        totalAmountOfDay > 150_000 -> println("В операции отказано. Превышен лимит суммы за день")
-        totalAmountOfMonth > 600_000 -> println("В операции отказано. Превышен лимит суммы за месяц")
+        totalAmountOfDay > 150_000 -> println("В операции отказано.  Превышен дневной лимит по карте")
+        totalAmountOfMonth > 600_000 -> println("В операции отказано. Превышен месячный лимит по карте")
         amount * 0.0075 < 35 -> println("Комиссия за перевод составит 35 руб.")
         else -> println{
             println("Сумма перевода составляет: $amount руб.")
@@ -52,8 +52,8 @@ fun countCommissionVkPay(
     totalAmountOfDay: Int = 0,
 ) {
     when {
-        totalAmountOfDay > 15_000 -> println("В операции отказано. Превышен лимит суммы за день")
-        totalAmountOfMonth > 40_000 -> println("В операции отказано. Превышен лимит суммы за месяц")
+        totalAmountOfDay > 15_000 -> println("В операции отказано. Превышен дневной лимит по карте")
+        totalAmountOfMonth > 40_000 -> println("В операции отказано. Превышен месячный лимит по карте")
         else -> println("Комиссия за перевод отсутствует")
     }
 }
